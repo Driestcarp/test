@@ -1,0 +1,24 @@
+Dagbok tdp003
+1/9 Första passet skrev vi grupp kontrakt  2h
+8/9 satt i ca 6 h och skrev tidsplanen och kollade igenom kurssidan 6h
+13/9 Gjorde LoFi-prototyp och blev klara med designen , tog 2h
+14/9 La in bilderna på LoFi-prototypen i ett dokument och förklarade lite lätt och skickade in den 20min
+15/9 Skrev på Projektplanen, gick segt, ca 3h
+18/9 skrev klart projektplan, gick segt, ca 2h
+19/9 började o skrev på installationsmanualen, gick segt, ca 2-3h
+20/9 skrev klart installationsmanualen och började med komplettering på lofi-prototypen, gjorde den i draw.io istället för på papper och skapade ett latex dokument , ca 2h
+21/9 gjorde klart lofi-p komp på draw.io och lade in bilderna i latex dokumentet, skrev om varje bild/sida hur den fungerade, skrev även komplitering på dagbok, 2,5h
+22/9 började på load i datalagret fick den att retunera en konstig direcory,  skapade även en git för projectet.  ca 1.5h
+25/9 började om på datalagret för vår load funktion var aldelles för onödigt stor. skrev alla andra funktioner och blev klara med alla förutom "search". ca 4h
+26/9 skrev klart searchfunktionen och kollade av med data_test.py och fick en del error. fixade error, i get_projects_that_contains_all, i search för fel tecken ca 1,5h
+27/9 redigerade fel i olika funktioner i datalagret ca 1h. skrev på komplittering av installationsmanual i 2-2,5h
+28/9 redovisade och skickade in datalagret. skickade in komp för installationsmanual. skrev  o skickade in komp för projektplan ca3h 
+2/10 arbeteade med utseendet på portfoliot, mest med index. fick det att fungera med att hämta senaste projekt. knappar fina   ca 5h
+3/10 presentationslager.  search ruta, projects 2.5h
+4/10 fixade med att visa projekt på techniques och att sökfunktionen fungerade. projects att dela upp så varje div hade ett eget project. ca 1.5h
+5/10 fixade att bilderna på projects blev snygga med cover. ca 10 min
+6/10 fixat error fångst, samt börjat med techniques knappar för "sort" ca 3h
+9/10 suttit med systemdokumentationen, påbörjade den och fastnade direkt. förstod inte vad man skulle skriva, försökte så gott vi kunde men gick inte jätte bra. jobbade hem-hemma över distans ochsnackde på discord, den delen gick bra. ca 2h
+9/11 flyttade sökrutan, kategorier och sortering från techniques till projects. fixade taggarnas utseende. ca 3hb
+9/12 skrev systemdokumentationen . ca 4h
+9/13 fixade små grejer (delvis: lade till sökfält), flyttade css filer till style map samt publicerade hemsidan.  ca 2.5h 

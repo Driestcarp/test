@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Projects
+{% endblock %}
+
+{% block page_name %}
+  Projects
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header%}
+  {{ super() }}
+  <div class="nav_bar">
+    <a href="{{url_for('index')}}"><div class="nav_element">Home</div></a>
+    <a href="{{url_for('list')}}"><div class="selected" class="nav_element">Projects</div></a>
+    <a href="{{url_for('techniques')}}"><div class="nav_element">Techniques</div></a>
+    <a href="{{url_for('about_me')}}"><div class="nav_element">About me</div></a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="projects_search_bar">
+  <form class="projects_absolut_bar" action="{{url_for('search_in_list')}}">
+    <div class="search_bar">
+      <input class="search_button" type="submit"  value="">
+      <input class="search_box" type="text" id="searchterm" name="searchterm" value="">
+    </div>  
+    <div class="search_fields">
+      <h2 style="padding-top: 15px;" >Search fields</h2>
+      <div class="elements">
+        <label>  
+          <input type="checkbox" name="search_fields" value="project_name"> 
+          Project name
+        </label>
+      </div>
+      <div class="elements">
+        <label>  
+          <input type="checkbox" name="search_fields" value="long_description"> 
+          Description
+        </label>
+      </div>
+      <div class="elements">
+        <label>  
+          <input type="checkbox" name="search_fields" value="techniques_used"> 
+          Techniques
+        </label>
+      </div>
+    </div>
+    <div class="sort_box">
+      <h2 style="padding-top: 15px;" >Sort</h2>
+      <div class="elements">
+        <label> 
+          <input type="radio" name="sort_by" id="sort_by" checked="checked" value="project_name">
+          Name
+        </label> <br>
+        <label> 
+          <input type="radio" name="sort_by" id="sort_by" value="start_date">
+          Date
+        </label>
+      </div>
+      <div class="elements">
+        <label> 
+          <input type="radio" name="sort_order" id="sort_order" checked="checked" value="ace">
+          Acending
+        </label><br>
+        <label> 
+          <input type="radio" name="sort_order" id="sort_order" value="desc">
+          Descending
+        </label>
+      </div>
+    </div>
+  <div class="category_box">
+    <h2 style="padding-top: 15px;">Category</h2>
+    <div class="elements">
+      <label>
+        <input  type="radio" name="checked_categorys" value="all"> All
+      </label>
+    </div>
+      {% for category in category_list %}
+      <div class="elements">
+        <label>
+          <input  type="radio" name="checked_categorys" value="{{category}}"> {{category}}
+        </label>
+      </div>
+      {% endfor %}
+  </div>
+  
+
+  </form>
+</div>
+
+
+<!--Listan av alla project -->
+<div class="projects_large_box">
+  {% for project in projects_to_render %}
+  <div class="projectsbox">
+    <a href="{{url_for('project', project_id=project.project_id)}}">
+      <div class="projects_img">
+        <img src="{{url_for('static', filename='images/' + project.small_image)}}">
+      </div>
+      <div class="projects_text">
+        <h2 class="projects_h2">{{ project.project_name }}</h2>
+        <p>{{project.short_description}}</p>
+        <br>
+        <div class="projects_date">
+          <p>{{ project.end_date }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

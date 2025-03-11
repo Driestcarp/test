@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en"> 
+  
+  <head>
+    <link href="{{ url_for('static', filename='style/player.css')}}" rel="stylesheet" type="text/css" />
+    {% if player[picture] == "None" %}
+        <link rel="icon" href="{{ url_for('static', filename='images/page_icon.jpg')}}">
+    {% else %}
+        <link rel="icon" href="{{ url_for('static', filename='images/' + player.picture)}}">
+    {% endif %}
+    <title>{{player["short_name"]}}</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    
+    <header>
+        <h1 class="title">
+            {{player["name"]}}
+        </h1>
+        <a href="{{ url_for('mutant')}}" class="desc"> Back </a>
+        <a href="{{ url_for('info')}}" target="_blank" class="desc"> Info </a>
+    </header>
+    <div id="content">
+        <!--                                                            -->
+        <!--   $$$$$$$\                                        $$\      -->
+        <!--   $$  __$$\                                     $$$$ |     -->
+        <!--   $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$\        \_$$ |     -->
+        <!--   $$$$$$$  | \____$$\ $$  __$$\ $$  __$$\         $$ |     -->
+        <!--   $$  ____/  $$$$$$$ |$$ /  $$ |$$$$$$$$ |        $$ |     -->
+        <!--   $$ |      $$  __$$ |$$ |  $$ |$$   ____|        $$ |     -->
+        <!--   $$ |      \$$$$$$$ |\$$$$$$$ |\$$$$$$$\       $$$$$$\    -->
+        <!--   \__|       \_______| \____$$ | \_______|      \______|   -->
+        <!--                       $$\   $$ |                           -->
+        <!--                       \$$$$$$  |                           -->
+        <!--                        \______/                            -->
+        <!--                                                            -->        
+        <div class="page_box">
+
+            <img class="pdf" src="../static/images/bild1.png" >
+
+            <form action="{{url_for('updated_page1', name=player.name)}}">
+            <div class="grundegenskaper">
+                {% for stat in player['stats'] %}
+                    <input class="grund_elemenmt" name="{{stat}}" value="{{player['stats'][stat]}}">
+                {% endfor %}
+            </div>
+            <div class="info">
+                <input name="player" class="info_elemenmt" value="{{player['player']}}">
+                <input name="gm" class="info_elemenmt" value="{{player['gm']}}">
+                <input name="pcname" class="info_elemenmt" value="{{player['name']}}">
+                <input name="klass" class="info_elemenmt" value="{{player['info']['Klass']}}">
+                <input name="tidigare_yrke" class="info_elemenmt" value="{{player['info']['Tidigare yrke']}}">
+                <input name="hemort" class="info_elemenmt" value="{{player['info']['Hemort']}}">
+            </div>
+            <input class="age" name="age" value="{{player['info']['Ålder']}}">
+            <input class="sex" name="sex" value="{{player['info']['Kön']}}">
+            <input class="length" name="length" value="{{player['info']['Längd']}}">
+            <input class="weight" name="weight" value="{{player['info']['Vikt']}}">
+
+            <input class="appearance_up" name="appearance_up" value="{{player['Utseende_uppe']}}">
+            <input class="appearance" name="appearance" value="{{player['Utseende']}}">
+
+            <input class="trauma_misc" name="trauma" value="{{player['misc']['traumatröskel'][0]}}">
+            <input class="stab_misc" name="stab" value="{{player['misc']['stab']}}">
+            <div class="info_1">
+                <input class="info_part_elemenmt" name="initiativ" value="{{player['misc']['initiativbonus']}}">
+                <input class="info_part_elemenmt" name="skade" value="{{player['misc']['skadebonus']}}">
+                <input class="info_part_elemenmt" name="bär" value="{{player['misc']['bärförmåga']}}">
+            </div>
+            <div class="info_2">
+                <input class="info_part_elemenmt" name="reaktion" value="{{player['misc']['reaktionsvärde']}}">
+                <input class="info_part_elemenmt" name="rykte" value="{{player['misc']['Rykte']}}">
+                <input class="info_part_elemenmt" name="status" value="{{player['misc']['status']}}">
+            </div>
+            <div class="info_3">
+                <input class="info_part_elemenmt" name="strid" value="{{player['misc']['förfly_strid']}}">
+                <input class="info_part_elemenmt" name="springa" value="{{player['misc']['förfly_springa']}}">
+                <input class="info_part_elemenmt" name="sprint" value="{{player['misc']['förfly_sprint']}}">
+            </div>
+                <input class="max_kp_info" name="kp_max" value="{{player['misc']['max_kroppspoäng']}}">
+                <input class="kp_info" name="kp" value="{{player['misc']['kroppspoäng']}}">
+
+            <div class="natural_skills">
+                {% for skill in player['natural_skills'] %}
+                    <div class="skill">
+                        <input class="skill_name" name="n_change_{{skill}}_name" value="{{skill}}" readonly>
+                        <input class="skill_value" name="n_change_{{skill}}" value="{{player['natural_skills'][skill]}}">
+                    </div>
+                {% endfor %}
+                {% if (player["natural_skills"]|length) < 17 %}
+                    <input class="new_skill" name="new_nat_skill" value="">
+                {% endif %}
+                
+            </div>
+
+            <div class="trained_skills">
+                {% for skill in player['trained_skills'] %}
+                    <div class="skill">
+                        <input class="skill_name" name="t_change_{{skill}}_name" value="{{skill}}" readonly>
+                        <input class="skill_value" name="t_change_{{skill}}" value="{{player['trained_skills'][skill]}}">
+                    </div>
+                {% endfor %}
+                {% if (player["trained_skills"]|length) < 17 %}
+                    <input class="new_skill" name="new_tra_skill" value="">
+                {% endif %}
+                
+            </div>
+
+            <div class="abilities">
+                {% for ability in player['abilities'] %}
+                <div class="ability">
+                    <input class="ability_name" name="a_change_{{ability}}_name" value="{{ability}}" readonly>
+                    <input class="ability_lyte" name="a_change_{{ability}}_lyte" value="{{player['abilities'][ability][0]}}">
+                    <input class="ability_discription" name="a_change_{{ability}}_discription" value="{{player['abilities'][ability][1]}}">
+                </div>
+                {% endfor %}
+                {% if (player["abilities"]|length) < 8 %}
+                    <input class="new_ability" name="new_ability" value="">
+                {% endif %}
+
+            </div>
+
+            <div class="resonans_box">
+                {% for i in range(23) %}
+                    {% if i < player['resonans'] %}
+                        <input type="checkbox" name="resonans" class="resonans" value="1" checked>
+                    {% else %}
+                        <input type="checkbox" name="resonans" class="resonans" value="1">
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <input type="submit" value="">
+            </form>
+        </div>
+
+
+        <!--                                                              -->
+        <!--   $$$$$$$\                                       $$$$$$\     -->
+        <!--   $$  __$$\                                     $$  __$$\    -->
+        <!--   $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$\        \__/  $$ |   -->
+        <!--   $$$$$$$  | \____$$\ $$  __$$\ $$  __$$\        $$$$$$  |   -->
+        <!--   $$  ____/  $$$$$$$ |$$ /  $$ |$$$$$$$$ |      $$  ____/    -->
+        <!--   $$ |      $$  __$$ |$$ |  $$ |$$   ____|      $$ |         -->
+        <!--   $$ |      \$$$$$$$ |\$$$$$$$ |\$$$$$$$\       $$$$$$$$\    -->
+        <!--   \__|       \_______| \____$$ | \_______|      \________|   -->
+        <!--                       $$\   $$ |                             -->
+        <!--                       \$$$$$$  |                             -->
+        <!--                        \______/                              -->
+        <!--                                                              -->
+
+        <div class="page_box">
+            <img class="pdf" src="../static/images/bild2.png" >
+            <form action="{{url_for('updated_page2', name=player.name)}}">
+                
+                <div class="armor">
+                    {% for row in player['armor'] %}
+                    <div class="armor_row">
+                        <input class="armor_name" name="armor_change_{{row}}_name" value="{{player['armor'][row][0]}}">
+                        <input class="armor_beg" name="armor_change_{{row}}_beg" value="{{player['armor'][row][1]}}">
+                        <input class="armor_abs" name="armor_change_{{row}}_abs" value="{{player['armor'][row][2]}}">
+                    </div>
+                    {% endfor %}
+                </div>
+                <input class="figur_huvud" name="figur_huvud" value="{{player['figur']['huvud']}}">
+                <input class="figur_kropp" name="figur_kropp" value="{{player['figur']['kropp']}}">
+                <input class="figur_h_arm" name="figur_h_arm" value="{{player['figur']['h_arm']}}">
+                <input class="figur_v_arm" name="figur_v_arm" value="{{player['figur']['v_arm']}}">
+                <input class="figur_h_ben" name="figur_h_ben" value="{{player['figur']['h_ben']}}">
+                <input class="figur_v_ben" name="figur_v_ben" value="{{player['figur']['v_ben']}}">
+
+                <div class="war_trix">
+                    {% for row in player['stridsfärdigheter'] %}
+                    <div class="page2_row">
+                        <input class="stridf_name" name="stridf_change_{{row}}_name" value="{{row}}" readonly>
+                        <input class="stridf_value" name="stridf_change_{{row}}_value" value="{{player['stridsfärdigheter'][row]}}">
+                    </div>
+                    {% endfor %}
+                    {% if (player["stridsfärdigheter"]|length) < 9 %}
+                        <input class="new_stridf" name="new_stridf" value="">
+                    {% endif %}
+                </div>
+ 
+                <div class="page2_info">
+                    <input class="p2_max_kp" name="p2_max_kp" value="{{player['misc']['max_kroppspoäng']}}">
+                    <input class="p2_kp" name="p2_kp" value="{{player['misc']['kroppspoäng']}}">
+                    <div class="p2_trauma">
+                        <input class="p2_trauma_value" name="trauma_1" value="{{player['misc']['traumatröskel'][0]}}">
+                        <input class="p2_trauma_value" name="trauma_2" value="{{player['misc']['traumatröskel'][1]}}">
+                        <input class="p2_trauma_value" name="trauma_3" value="{{player['misc']['traumatröskel'][2]}}">
+                    </div>
+                    <div class="p2_misc_box">
+                        <input class="p2_misc" name="intiv" value="{{player['misc']['initiativbonus']}}">
+                        <input class="p2_misc" name="förfly_strid" value="{{player['misc']['förfly_strid']}}">
+                        <input class="p2_misc" name="förfly_springa" value="{{player['misc']['förfly_springa']}}">
+                        <input class="p2_misc" name="förfly_sprint" value="{{player['misc']['förfly_sprint']}}">
+                        <input class="p2_misc" name="skadebonus" value="{{player['misc']['skadebonus']}}">
+                    </div>
+                    <div class="p2_misc_box_2">
+                        <div class="p2_misc_row">
+                            <input class="misc_row_content" name="bärförmåga" value="{{player['misc']['bärförmåga']}}">
+                            <input class="misc_row_content" name="bärvikt" value="{{player['misc']['bärvikt']}}">
+                            <input class="misc_row_content" name="bär_minus" value="{{player['misc']['bär_minus']}}">
+                        </div>
+                        <div class="p2_misc_row">
+                            <input class="misc_row_content" name="rust_beg" value="{{player['misc']['rust_beg']}}">
+                            <input class="misc_row_content" name="iaktagelse_minus" value="{{player['misc']['iaktagelse_minus']}}">
+                            <input class="misc_row_content" name="stab" value="{{player['misc']['stab']}}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ammo_box">
+                    {% for type in player['ammo'] %}
+                        <div class="ammo">
+                            <input class="ammo_type" name="ammo_type_{{type}}" value="{{type}}" readonly>
+                            <input class="ammo_mod" name="ammo_mod_{{type}}" value="{{player['ammo'][type]['mod']}}" >
+                            <input class="ammo_amount" name="ammo_amount_{{type}}" value="{{player['ammo'][type]['antal']}}" >
+                            <input class="ammo_dmg" name="ammo_dmg_{{type}}" value="{{player['ammo'][type]['skada']}}" >
+                            <input class="ammo_shot1" name="ammo_shot_{{type}}_1" value="{{player['ammo'][type]['skjutna'][0]}}" >
+                            <input class="ammo_shot2" name="ammo_shot_{{type}}_2" value="{{player['ammo'][type]['skjutna'][1]}}" >
+                        </div>
+                    {% endfor %}
+                    {% if (player["ammo"]|length) < 4 %}
+                        <input class="new_ammo" name="new_ammo" value="">
+                    {% endif %}
+                </div>
+                <div class="equipment">
+                    {% for row in range(player["equipment"]|length) %}
+                    <div class="page2_row">
+                        <input class="thing_name" name="thing_change_{{row}}_name" value="{{player['equipment'][row][0]}}">
+                        <input class="stridf_value" name="thing_change_{{row}}" value="{{player['equipment'][row][1]}}">
+                    </div>
+                    {% endfor %}
+                    {% if (player["equipment"]|length) < 21 %}
+                        <input class="stridf_name" name="new_thing" value="">
+                    {% endif %}
+                </div>
+                <div class="weapon_box">
+                    {% for row in range(player["weapons"]|length) %}
+                    <div class="weapon">
+                        <input class="weapon_name" name="weapon_change_{{row}}_name" value="{{player['weapons'][row]['vapen']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_fattning" value="{{player['weapons'][row]['fattning']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_initiativ" value="{{player['weapons'][row]['initiativ']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_magasin" value="{{player['weapons'][row]['magasin']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_pen" value="{{player['weapons'][row]['pen']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_pål" value="{{player['weapons'][row]['pål']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_max_pål" value="{{player['weapons'][row]['max_pål']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_räckv" value="{{player['weapons'][row]['räckv']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_skada" value="{{player['weapons'][row]['skada']}}">
+                        <input class="weapon_values" name="weapon_change_{{row}}_tålighet" value="{{player['weapons'][row]['tålighet']}}">
+                    </div>
+                    {% endfor %}
+                    {% if (player["weapons"]|length) < 8 %}
+                        <input class="new_weapon" name="new_weapon" value="">
+                    {% endif %}
+                </div>
+
+            <input type="submit" value="">
+            </form>
+        </div>
+
+
+        <!--                                                              -->
+        <!--   $$$$$$$\                                       $$$$$$\     -->
+        <!--   $$  __$$\                                     $$ ___$$\    -->
+        <!--   $$ |  $$ | $$$$$$\   $$$$$$\   $$$$$$\        \_/   $$ |   -->
+        <!--   $$$$$$$  | \____$$\ $$  __$$\ $$  __$$\         $$$$$ /    -->
+        <!--   $$  ____/  $$$$$$$ |$$ /  $$ |$$$$$$$$ |        \___$$\    -->
+        <!--   $$ |      $$  __$$ |$$ |  $$ |$$   ____|      $$\   $$ |   -->
+        <!--   $$ |      \$$$$$$$ |\$$$$$$$ |\$$$$$$$\       \$$$$$$  |   -->
+        <!--   \__|       \_______| \____$$ | \_______|       \______/    -->
+        <!--                       $$\   $$ |                             -->
+        <!--                       \$$$$$$  |                             -->
+        <!--                        \______/                              -->
+        <!--                                                              -->
+
+        <div class="page_box">
+            <img class="pdf" src="../static/images/bild3.png" >
+            <form action="{{url_for('updated_page3', name=player.name)}}">
+                <input class="money" name="pocket_money" value="{{player['stash'][0]['pocket_money']}}">
+                <input class="bank_money1" name="bank_money1" value="{{player['stash'][0]['bank_money1']}}">
+                <input class="bank_money2" name="bank_money2" value="{{player['stash'][0]['bank_money2']}}">
+                
+                <div class="stash_box">
+                    {% for row in range(player['stash'][1]|length)%}
+                        <div class="stash_row">
+                            <input class="stash_antal" name="antal_{{row}}" value="{{player['stash'][1][row]['antal']}}">
+                            <input class="stash_name" name="name_{{row}}" value="{{player['stash'][1][row]['name']}}">
+                            <input class="stash_vikt" name="vikt_{{row}}" value="{{player['stash'][1][row]['vikt']}}">
+                            <input class="stash_värde" name="värde_{{row}}" value="{{player['stash'][1][row]['värde']}}">
+                            <input class="stash_info" name="info_{{row}}" value="{{player['stash'][1][row]['info']}}">
+                        </div>
+                    {% endfor %}
+                    {% if (player["stash"][1]|length) < 36 %}
+                        <input class="new_stash_item" name="new_stash_item" value="">
+                    {% endif %}
+                </div>
+                
+                
+                <input type="submit" value="">
+            </form>
+        </div>
+    </div> 
+    <div style="margin-bottom: 100px;"></div>
+    <div id="footer">
+      
+    </div>
+  </body>
+</html

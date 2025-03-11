@@ -1,0 +1,570 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(231, 221, 204);
+}
+p{
+    margin: 0;
+    line-height: 24px;
+    font-size: 20px;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: relative;
+    bottom: 0;
+    border-radius: 20px;
+    border: rgba(40, 44, 29, 0.75) solid 5px;
+    box-shadow: inset 0 0 50px 0px black;
+}
+h3, h2, h1{
+    margin-top: 0;
+}
+label:hover, input:hover{
+    cursor: pointer;
+}
+
+
+body{
+    background-image: url(background.png);
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: overlay;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    content: icon;
+    margin: 0;
+    padding: 0;
+
+}
+.baseh1{
+    padding: 0;
+    margin: 0;
+    font-size: 72px;
+    float: left;
+    color: rgb(231, 221, 204);
+    font-weight: bold;
+    position: absolute;
+    text-align: left;
+    margin-left: 70px;
+}
+
+
+header{
+    background-color: rgb(56, 70, 38);
+    border-bottom: solid rgba(0, 0, 0, 0.5) 3px;
+    padding: 25px;
+    left:0;
+    top:0;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    height: 175px;
+    width: 100%;
+    margin: 0;
+}
+.deadspace{
+    height: 175px;
+    width: 100%;
+}
+.nav_bar{
+    position: static;
+    left: 10%;
+    right: 10%;
+    top: 100px;
+    height: fit-content;
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 90px;
+}
+.nav_element{
+    float: left;
+    display: block;
+    padding: 8px ;
+    border: solid 1.5px rgb(46, 48, 45);
+    border-radius: 7.5px;
+    text-align: center;
+    width: 125px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(10, 10, 10);
+    transition-duration: 0.4s;
+    color: white;
+    
+}
+.nav_element:hover{
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.50);
+    scale: 1.05;
+}
+.selected{
+    float: left;
+    display: block;
+    padding: 8px ;
+    border: solid 1.5px rgb(230, 245, 212);
+    border-radius: 7.5px;
+    text-align: center;
+    width: 125px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition-duration: 0.4s;
+    background-color:rgb(10, 10, 10);
+    color: white;
+}
+.selected:hover{
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.50);
+    scale: 1.05;
+}
+
+
+
+
+.test{
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    height: 85%;
+    margin-bottom: 25px;
+    --mask: linear-gradient(to bottom, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 96%, 
+      rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0
+    ) 100% 10% / 100% 100% repeat-x;
+    
+    -webkit-mask: var(--mask); 
+    mask: var(--mask);
+    width: 100%;
+  
+}
+
+
+#content{
+    color: rgb(231, 222, 204);
+}
+
+
+#footer{
+    text-align: center;
+    color: rgb(231, 222, 204);
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+}
+
+
+
+/*  
+                                                 ############
+                                                 ### HOME ###
+                                                 ############
+*/
+.homebox{
+    background-color: rgba(101, 112, 75, 0.5);
+    width: 50%;
+    margin: 50px;
+    height: 1000px;
+    margin-left: 10%;
+    margin-right: 40%;
+    border-radius: 50px;
+    padding: 50px;
+    min-width: 600px;
+}
+.homebox_h1{
+    margin: 0;
+    padding: 0;
+    font-size: 62px;
+}
+.homebox_head{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50%;
+}
+.homebox_project{
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.homebox_project_text{
+    margin: 0;
+    padding: 0;
+    height: 70%;
+    width: 60%;
+    float:left;
+}
+.homebox_project_info{
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    height: 30%;
+    bottom: 10px;
+    float: left;
+}
+.homebox_img{
+    float: right;
+    width: 40%;
+    max-width: 600px;
+    height: 100%;
+    text-align: right;
+    padding: 5px;
+}
+.homebox_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/*  
+    ################
+    ### PROJECTS ###
+    ################
+*/
+.projects_search_bar{
+    position: fixed;
+    left: 0;
+    top: 175px;
+    width: 100%;
+    min-width: 1300px;
+    height: auto;
+    min-height: 125px;
+    
+}
+.projects_absolut_bar{
+    position: absolute; 
+    width:100%; 
+    height:100%;
+    flex-wrap: wrap;
+    display: flex;
+    padding: 20px;
+    padding-left: 7%;
+}
+.sort_box, .category_box, .search_fields{
+    width: auto;
+    margin-left: 50px;
+    text-align: left;
+    background-color: rgba(101, 112, 75, 0.5);
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    margin: 0;
+    padding: 0;
+}
+.elements{
+    margin: auto;
+    margin-left: 10px;
+    border-left: black solid 2px;
+    padding-left: 10px;
+    position: relative;
+    bottom: 0;
+    
+}
+.search_bar{
+    width: 320px;
+    height: 40px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    margin-top: 20px;
+
+}
+.search_button{
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(search_icon.png);
+    background-size: cover;
+    border-radius: 15px;
+    border: 0;
+}.search_button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    scale: 1.1;
+}
+.search_box{
+    height: 40px;
+    width: 87%;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+}
+.projects_large_box{
+    position: static;
+    min-width: 730px;
+    width: 90%;
+    margin: 5%;
+    margin-top: 125px;
+    flex-wrap: wrap;
+    display: flex;
+    overflow-y: scroll;
+    height: 75%;
+    position: fixed;
+    --mask: linear-gradient(to top, 
+    rgba(0,0,0, 1) 10%,   rgba(0,0,0, 1) 97%, 
+    rgba(0,0,0, 0) 100%, rgba(0,0,0, 0) 0%
+  ) 100% 10% / 100% 100% repeat-x;
+  -webkit-mask: var(--mask); 
+    mask: var(--mask);
+}
+.projectsbox{
+    background-color: rgba(101, 112, 75, 0.5);
+    padding: 0;
+    width: 48%;
+    border-radius: 25px;
+    margin: 10px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 700px;
+    height: 250px;
+    transition: 0.3s;
+}
+.projectsbox:hover{
+    scale: 1.02;
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.50);
+}
+.projects_h2{
+    border-bottom: rgb(231, 222, 204) solid 1.5px;
+    padding-bottom: 10px;
+    width: 70%;
+    margin-bottom: 10px;
+}
+.projects_text{
+    padding: 15px;
+    width: 65%;
+    height: 100%;
+    border-radius: 25px;
+    position: relative;
+}
+.projects_date{
+    position: absolute;
+    bottom: 15px;
+    color: rgba(211, 211, 211, 0.75);
+}
+.projects_img{
+    float: right;;
+    border-radius: 25px;
+    max-width: 30%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+.projects_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/*  
+    ###############
+    ### PROJECT ###
+    ###############
+*/
+.project_large_box{
+    background-color: rgba(101, 112, 75, 0.5);
+    width: 80%;
+    margin: 50px;
+    height: 1000px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50px;
+    min-width: 1300px;
+}
+.project_left_div{
+    width: 60%;
+    height: 100%;
+    float: left;
+    position: relative;
+    padding: 50px;
+}
+.project_tech_info{
+    position: absolute;
+    bottom:0;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.project_h1{
+    font-size: 52px;
+    border-bottom: white solid 1.5px;
+    padding-bottom: 15px;
+    width: 85%;
+}
+.project_right_div{
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+.project_big_img{
+    height: 60%;
+    width: 100%;
+    padding: 20px;
+}
+.project_big_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin:auto;
+}
+.project_small_img{
+    height: 40%;
+    width: 100%;
+    padding: 20px;
+}
+.project_small_img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/*  
+    ##################
+    ### TECHNIQUES ###
+    ##################
+*/
+.techniques_search_meny{
+    position: fixed;
+    right: 0;
+    top: 175px;
+    width: 25%;
+    min-width: 200px;
+    height: 100%;
+    align-content: center;
+    background: linear-gradient(to left, black, rgba(255, 255, 255, 0));
+}
+.tag_box{
+    text-align: center;
+    width: 100px;
+    align-self: center;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    
+}
+.tag_element{
+    width: 40%;
+    margin-left: 40%;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tech_box{
+    position: absolute;
+    width: 75%;
+    min-width: 400px;
+    flex-wrap: wrap;
+    display: flex;
+    align-content: center;
+}
+.tech_project_box{
+    background-color: rgba(101, 112, 75, 0.5);
+    width: 10%;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 500px;
+    min-height: 500px;
+    height: auto;
+    transition: 0.3s;
+    position: relative;
+}
+.tech_project_box:hover{
+    scale: 1.02;
+    transition: 0.2s;
+}
+.tech_project_box_info{
+    position: absolute;
+    bottom: 25px;
+}
+.hw100{
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+body {
+    background-image: url("https://images.pixexid.com/aerial-view-of-a-meandering-river-through-a-lush-green-forest-aerial-photograph-q7kyip0l.jpeg");
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: overlay;
+    width: 100%;
+    background-size:cover;
+    content: none;
+    background-attachment: fixed;
+    
+}
+
+header{
+    background-color: rgb(56, 70, 38);
+    border-bottom: solid rgba(0, 0, 0, 0.5) 3px;
+    padding:0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    left:0;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    
+}
+.baseh1{
+    font-size: 48px;
+    float: none;
+    position: relative;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.nav_bar{
+    position: static;
+    top: 20%;
+    height: 80px;
+    display: flex;
+    width: 276px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 10px;
+}
+.nav_element{
+    float: left;
+    display: block;
+    background-color: lightgray;
+    color: #000;
+    padding: 8px;
+    text-decoration: none;
+    border: solid 1.5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 125px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+}
+

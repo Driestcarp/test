@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Techniques
+{% endblock %}
+
+{% block page_name %}
+  Techniques
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="nav_bar">
+    <a href="{{url_for('index')}}"><div class="nav_element">Home</div></a>
+    <a href="{{url_for('list')}}"><div class="nav_element">Projects</div></a>
+    <a href="{{url_for('techniques')}}"><div class="selected" class="nav_element">Techniques</div></a>
+    <a href="{{url_for('about_me')}}"><div class="nav_element">About me</div></a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="tech_box">
+  {% for project in projects_to_render %}
+  
+    <div class="tech_project_box">
+      <a href="{{url_for('project', project_id=project.project_id)}}">
+        <div class="hw100">
+          <h1 style="text-align: center;">{{ project.project_name }}</h1>
+          <p>{{project.short_description}}</p>
+          <div class="tech_project_box_info">
+            <p>Date: {{ project.end_date }}</p>
+            <p>Category: {{ project.course_id }}</p>
+            <p>Tags: {{ project.techniques_used }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  
+
+  {% endfor %}
+</div>
+
+<div class="techniques_search_meny">
+  
+<form action="{{url_for('search_in_tech')}}">
+  <h1 class="tag_box">Tags</h1>
+  <div class="tag_element">
+    <input type="submit" value="Submit">
+  </div>
+  {% for technique in technique_list %}
+  <div class="tag_element">
+    <label>  
+      <input type="checkbox" name="checked_techniques" value="{{technique}}"> {{technique}}
+    </label>
+  </div>
+  {% endfor %}
+</form>
+  
+</div>
+
+
+<div class="deadspace"> </div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

@@ -1,0 +1,193 @@
+[
+    {
+        "player": "Albin",
+        "name": "Lars Göran",
+        "picture": "LG.jpg",
+        "short_name": "LG",
+        "gm": "Moltas",
+        "info": {
+            "Ålder": "22",
+            "Kön": "Man",
+            "Längd": "135",
+            "Vikt": "45",
+            "Klass": "Djur Mutant, Anka",
+            "Tidigare yrke": "Soldat",
+            "Hemort": "Pirit"
+        },
+        "Utseende_uppe": ".....",
+        "Utseende": "Anka",
+        "stats": {
+            "Styrka": "13",
+            "Fysik": "14",
+            "Storlek": "4",
+            "Smidighet": "18",
+            "Intelligens": "14",
+            "Vilja": "10",
+            "Personlighet": "9"
+        },
+        "misc": {
+            "initiativbonus": "23",
+            "skadebonus": "-1D2",
+            "bärförmåga": "13",
+            "reaktionsvärde": "65",
+            "Rykte": "1",
+            "status": "?",
+            "förfly_strid": "4.5",
+            "förfly_springa": "4.5",
+            "förfly_sprint": "4.5",
+            "max_kroppspoäng": "19",
+            "kroppspoäng": "19",
+            "traumatröskel": [
+                "9",
+                "?",
+                "?"
+            ],
+            "stab": "?",
+            "iaktagelse_minus": "",
+            "bärvikt": "0",
+            "bär_minus": "0",
+            "rust_beg": "0"
+        },
+        "natural_skills": {
+            "Akrobatik": "36",
+            "Båge": "13",
+            "Första hjälpen": "14",
+            "Gevär": "80",
+            "Iaktagelseförmåga": "14",
+            "Kasta": "36",
+            "Köpslå": "9",
+            "Närstrid": "13",
+            "Pistol": "54",
+            "Smyga/Gömma sig": "65",
+            "Infra syn": "75"
+        },
+        "trained_skills": {
+            "Undvika": "85",
+            "Fällor": "50",
+            "Sprängämnen": "30",
+            "Fordon": "20",
+            "Undre världen": "9",
+            "Tunga vapen": "18"
+        },
+        "abilities": {
+            "Dubbelhjärna": [
+                "",
+                "Dubbla handlingar"
+            ],
+            "Infra syn": [
+                "",
+                "Se värme"
+            ],
+            "Liten": [
+                "",
+                "Mindre storlek"
+            ]
+        },
+        "resonans": 1,
+        "armor": {
+            "head": [
+                "aaa",
+                "10",
+                "25"
+            ],
+            "chest": [
+                "aaa",
+                "10",
+                "25"
+            ],
+            "right_arm": [
+                "aaa",
+                "10",
+                "25"
+            ],
+            "left_arm": [
+                "aaa",
+                "10",
+                "25"
+            ],
+            "right_leg": [
+                "aaa",
+                "10",
+                "25"
+            ],
+            "left_leg": [
+                "aaa",
+                "10",
+                "26"
+            ]
+        },
+        "figur": {
+            "huvud": "",
+            "kropp": "",
+            "h_arm": "",
+            "v_arm": "",
+            "h_ben": "",
+            "v_ben": ""
+        },
+        "stridsfärdigheter": {
+            "test": "5",
+            "TEST": "10"
+        },
+        "ammo": {
+            "7.62": {
+                "mod": "",
+                "antal": "37",
+                "skada": "",
+                "skjutna": [
+                    "",
+                    ""
+                ]
+            },
+            "aa": {
+                "mod": "",
+                "antal": "",
+                "skada": "",
+                "skjutna": [
+                    "",
+                    ""
+                ]
+            }
+        },
+        "equipment": [
+            [
+                "Lätt stridsväst",
+                "10"
+            ],
+            [
+                "Armehjälm",
+                "10"
+            ]
+        ],
+        "weapons": [
+            {
+                "vapen": "Gevär 7.62 repeter",
+                "fattning": "2",
+                "initiativ": "2",
+                "magasin": "5",
+                "pen": "0",
+                "pål": "100",
+                "max_pål": "100",
+                "räckv": "200",
+                "skada": "5D6",
+                "tålighet": "12",
+                "vikt": 2
+            }
+        ],
+        "stash": [
+            {
+                "pocket_money": "80",
+                "bank_money1": "2500",
+                "bank_money2": ""
+            },
+            [
+                {
+                    "name": "Rep",
+                    "antal": "20",
+                    "vikt": "1",
+                    "värde": "1",
+                    "info": ""
+                }
+            ]
+        ]
+    }
+]

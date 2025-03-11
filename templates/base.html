@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"> 
+  
+  <head>
+    {% block head %}
+    <link href="{{ url_for('static', filename='style/style.css')}}" rel="stylesheet" type="text/css" />
+    <title>{% block page_name %}{% endblock %}</title>
+    <meta charset="UTF-8"/>
+    {% endblock %}
+  </head>
+  <body>
+    
+    <header>
+      {% block header %}
+        <h1 class="baseh1" >{% block title %}{% endblock %}</h1>
+      {% endblock %}
+    </header>
+    <div class="deadspace"></div>
+    <div class="test">
+        <div id="content">
+          {% block content %}
+          {% endblock %}
+        </div>
+        
+    </div> 
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2023 by <a href="https://gitlab.liu.se/alblo676/tdp003"> alblo676 & turst683</a>.
+      {% endblock %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,652 @@
+*{
+    padding: 0;
+    margin: 0;
+    display: flexbox;
+    font-size: 21px;
+}
+
+body{
+    background-image: url(../images/icons_inv.png);
+    background-color: rgba(124, 136, 132, 0.75);
+    background-blend-mode: overlay;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    content: icon;
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    text-align: center;
+    background-color: rgb(43, 48, 47);
+    color: rgb(236, 225, 195);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-bottom: 15px;
+    border-bottom: rgb(19, 34, 30) solid 5px;
+}
+.title{
+    padding-top: 10px;
+    font-size: 70px;
+    -webkit-text-stroke: 5px rgba(0, 0, 0, 0.25);
+}
+.desc{
+    position: relative;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgba(255, 241, 196, 0.55);
+    margin: 5px;
+    transition: 0.2s;
+}
+.desc:hover{
+    color: rgba(255, 241, 196, 0.95);
+}
+#content{
+    margin-top: 150px;
+}
+
+.page_box{
+    display: block;
+    align-content: center;
+    position: relative;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.pdf{
+    width: 100%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 25px black;
+}
+
+.grundegenskaper{
+    position: absolute;
+    left: 272px;
+    top: 127px;
+}
+.grund_elemenmt{
+    text-align: center;
+    margin-bottom: 6.7px;
+    height: 25px;
+    display: block;
+    width: 50px;
+}
+
+.info{
+    position: absolute;
+    left: 485px;
+    top: 33px;
+}
+.info_elemenmt{
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6.7px;
+    height: 25px;
+}
+
+.age{
+    position: absolute;
+    top: 223px;
+    left: 420px;
+    width: 50px;
+    text-align: center;
+}
+.sex{
+    position: absolute;
+    top: 223px;
+    left: 566px;
+}
+.length{
+    position: absolute;
+    top: 223px;
+    left: 780px;
+}
+.weight{
+    position: absolute;
+    top: 223px;
+    left: 914px;
+    width: 50px;
+    text-align: center;
+}
+.appearance_up{
+    position: absolute;  
+    top: 254px;
+    left: 473px;
+    width: 490px;
+    height: 24px;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: start;
+    
+}
+.appearance{
+    position: absolute;
+    top: 283px;
+    left: 350px;
+    width: 615px;
+    height: 27px;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: start;
+    
+}
+.trauma_misc{
+    position: absolute;
+    top: 317px;
+    left: 570px;
+}
+.stab_misc{
+    position: absolute;
+    top: 317px;
+    left: 916px;
+    width: 50px;
+    text-align: center;
+}
+.info_1{
+    position: absolute;
+    top: 362px;
+    left: 191px;
+    width: 60px;
+}
+.info_2{
+    position: absolute;
+    top: 362px;
+    left: 412px;
+    width: 60px;
+}
+.info_3{
+    position: absolute;
+    top: 362px;
+    left: 633px;
+    width: 60px;
+}
+.info_part_elemenmt{
+    text-decoration: none;
+    margin-bottom: 7.6px;
+    text-align: center; 
+    width:50px;
+}
+.max_kp_info{
+    position: absolute;  
+    top: 394px;
+    left: 760px;
+    width: 197px;
+}
+.kp_info{
+    position: absolute;
+    top: 426px;
+    left: 702px;
+    width: 254px;
+}
+
+.natural_skills{
+    position: absolute;
+    top: 511px;
+    left: 39px;
+}
+.trained_skills{
+    position: absolute;
+    top: 511px;
+    left: 512px;
+}
+.skill{
+    height: 21px;
+    margin-bottom: 10.66px;
+    width: 390px;
+}
+.new_skill{
+    width: 390px;
+}
+.skill_name{
+    display: block;
+
+}
+.skill_value{
+    width: 40px;
+    text-align: center;
+    position: relative;
+    top: -25px;
+    left: 410px;
+}
+
+.abilities{
+    position: absolute;
+    top: 1105px;
+    left: 39px; 
+}
+.ability{
+    height: 21px;
+    width: 215px;
+    margin-bottom: 10.66px;
+}
+.ability_name{
+    display: block;
+    width: 215px;
+}
+.ability_lyte{
+    width: 45px;
+    text-align: center;
+    position: relative;
+    top: -24px;
+    left: 233px;
+}
+.ability_discription{
+    width: 625px;
+    text-align: left;
+    position: relative;
+    top: -49px;
+    left: 296px;
+}
+.new_ability{
+    width: 215px;
+}
+
+.resonans_box{
+    position: absolute;
+    top: 1366px;
+    left: 266px;
+    height: 26px;
+    width: 705px;
+}
+.resonans{
+    float: left;
+    
+}
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #ffffff00;
+    margin: 0;
+    color: currentColor;
+    width: 26px;
+    height: 26px;
+    margin-right: 4.45px;
+    border: 0.15em solid rgba(80, 80, 80, 0);
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+}
+input[type="checkbox"]:checked::after {
+    color: rgb(0, 0, 0);
+    content: "X";
+    font-size: 30px;
+    position: absolute;
+    left: 0px;
+    top: -7px;
+}
+
+.armor{
+    position: absolute;  
+    top: 178px;
+    left: 50px;
+    height: 186px;
+    width: 273px;
+}
+.armor_row{
+    height: 25px;
+    width: 270px;
+    margin-bottom: 6.75px;
+}
+.armor_name{
+    width: 152px;
+}
+.armor_beg{
+    position: relative;
+    width: 48px;
+    left: 160px;
+    top: -23px;
+    text-align: center;
+}
+.armor_abs{
+    position: relative;
+    width: 48px;
+    left: 220px;
+    top: -47px;
+    text-align: center;
+}
+.figur_huvud{
+    position: absolute;
+    left: 396px;
+    top: 153px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.figur_kropp{
+    position: absolute;  
+    left: 390px;
+    top: 242px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.figur_h_arm{
+    position: absolute;
+    left: 354px;
+    top: 214px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.figur_v_arm{
+    position: absolute;
+    left: 431px;
+    top: 214px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.figur_h_ben{
+    position: absolute;
+    left: 361px;
+    top: 285px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.figur_v_ben{
+    position: absolute;
+    left: 415px;
+    top: 285px;
+    width: 21px;
+    height: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.war_trix{
+    position: absolute;
+    top: 77px;
+    left: 505px;
+    height: 278px;
+    width: 459px;
+}
+.page2_row{
+    height: 25px;
+    width: 459px;
+    margin-bottom: 6.75px;
+}
+.stridf_name{
+    width: 395px; 
+    height: 25px;
+    color: black;
+}
+.stridf_value{
+    position: relative;
+    width: 48px;
+    left: 409px;
+    top: -25px;
+    text-align: center;
+}
+
+.page2_info{
+    position: absolute;
+    top: 391px;
+    left: 33px;
+    height: 246px;
+    width: 432px;
+}
+.p2_max_kp{
+    position: absolute;  
+    top: 35px;
+    left: 58px;
+    width: 154px;
+}
+.p2_kp{
+    position: absolute;
+    top: 67px;
+    left: 0px;
+    width: 211px;
+}
+.p2_misc_box{
+    position: absolute;
+    left: 380px;
+    top: 2px;
+    width: 53px;
+}
+.p2_misc{
+    height: 25px;
+    width: 50px;
+    margin-bottom: 6.9px;
+    text-align: center;
+}
+.p2_misc_box_2{
+    position: absolute;
+    left: 107px;
+    top: 183px;
+    width: 422px;
+    height: 60px;
+}
+.p2_misc_row{
+    height: 27px;
+    margin-bottom: 7px;
+}
+.misc_row_content{
+    float: left; 
+    width: 51px;
+    margin-right: 86px;
+    text-align: center;
+}
+.p2_trauma{
+    position: absolute;
+    left: -3px;
+    top: 130px;
+    width: 247px;
+    height: 27px;
+}
+.p2_trauma_value{
+    float: left; 
+    width: 53px;
+    margin-right: 29px;
+    text-align: center;
+
+}
+
+.ammo_box{
+    position: absolute;
+    top: 660px;
+    left: 137px;
+    height: 419px;
+    width: 335px;
+}
+.ammo{
+    position: relative;
+    height: 93px;
+    width: 330px;
+    margin-bottom: 15.7px;
+}
+.ammo_type{
+    position: absolute;
+    width: 153px;
+    left: 4px;
+    top: 2px;
+}
+.ammo_mod{
+    position: absolute;
+    width: 46px;
+    top: 34px;
+    text-align: center;
+}
+.ammo_amount{
+    position: absolute;
+    width: 46px;
+    top: 66px;
+    text-align: center;
+}
+.ammo_dmg{
+    position: absolute;
+    top: 2px;
+    left: 242px;
+    width: 83px;
+}
+.ammo_shot1{
+    position: absolute;
+    top: 34px;
+    left: 140px;
+    width: 187px;
+    height: 30px;
+}
+.ammo_shot2{
+    position: absolute;
+    top: 64px;
+    left: 65px;
+    width: 262px;
+    height: 27px;
+}
+.new_ammo{
+    margin-top: 20px;
+    width: 154px;
+}
+
+
+.equipment{
+    position: absolute;
+    top: 420px;
+    left: 505px;
+    height: 658px;
+    width: 460px;
+}
+
+.weapon_box{
+    position: absolute;
+    width: 932px;
+    height: 250px;
+    left: 34px;
+    top: 1140px;
+}
+.weapon{
+    width: 936px;
+    height: 27px;
+    margin-bottom: 4.6px;
+}
+.weapon_name{
+    width: 239px;
+    float: left;
+}
+.weapon_values{
+    margin-left: 9px;
+    width: 68px;
+    float: left;
+    text-align: center;
+}
+
+
+
+
+
+
+.money{
+    position: absolute;
+    top: 55px;
+    left: 765px;
+    width: 195px;
+    overflow: hidden;
+    
+}
+.bank_money1{
+    align-content: start;
+    position: absolute;
+    top: 85px;
+    left: 722px;
+    width: 238px;
+    height: 28px;
+    overflow: hidden;
+}
+.bank_money2{
+    align-content: start;
+    position: absolute;
+    top: 113px;
+    left: 633px;
+    width: 329px;
+    height: 33px;
+    overflow: hidden;
+}
+
+.stash_box{
+    position: absolute;
+    top: 210px;
+    left: 33px;
+    width: 933px;
+    height: 1143px;
+}
+.stash_row{
+    position: relative;
+    left: 2px;
+    width: 931px;
+    height: 28px;
+    margin-bottom: 3.9px;
+}
+.stash_antal{
+    float: left; 
+    width: 52px;
+    text-align: center;
+}
+.stash_name{
+    float: left;
+    margin-left: 10px;
+    width: 287px;
+}
+.stash_vikt{
+    float: left;
+    margin-left: 7px;
+    width: 48px;
+    text-align: center;
+}
+.stash_värde{
+    float: left;
+    margin-left: 11px;
+    width: 102px;
+    text-align: center;
+}
+.stash_info{
+    float: left;
+    margin-left: 11px;
+    width: 400px;
+}
+.new_stash_item{
+    margin-left: 63px;
+    width: 284px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    overflow: hidden;
+    display: block;
+}
+input:focus{
+    outline: none;
+}
+input[type="submit"]{
+    position: fixed; 
+    top: 0;
+    right: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+   
+    .page_box{
+        display: block;
+        align-content: center;
+        position: relative;
+        width: 1000px;
+        left: -30px;
+        top: -30px;
+        margin-left: auto;
+        margin-right: auto;
+        scale: 0.9;
+    }
+}

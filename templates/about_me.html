@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+  About me
+{% endblock %}
+
+{% block page_name %}
+  About me
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="nav_bar">
+    <a href="{{url_for('index')}}"><div class="nav_element">Home</div></a>
+    <a href="{{url_for('list')}}"><div class="nav_element">Projects</div></a>
+    <a href="{{url_for('techniques')}}"><div class="nav_element">Techniques</div></a>
+    <a href="{{url_for('about_me')}}"><div class="selected" class="nav_element">About me</div></a>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="homebox">
+  <div>
+    <h1>Namn</h1>
+    <h3>Utbildning:</h3>
+    <p>
+      Lorem ipsum dolor sit amet
+    </p>
+    <h3>Erfarenheter:</h3>
+    <p>
+      Lorem ipsum dolor sit amet
+    </p>
+    <h3>Om mig:</h3>
+    <p>
+      Lorem ipsum dolor sit amet
+    </p>
+  </div>
+  <div>
+    <img style="height:150px;" src="https://image.cnbcfm.com/api/v1/image/107241090-1684160036619-gettyimages-1255019394-AFP_33F44YL.jpeg?v=1685596344">
+  </div>
+  <div>
+    <h3>Kontaktinfo</h3>
+    <p>
+      Mail: LiuID@student.liu.se
+
+      Telefon: 070-707-07-07
+    </p>
+    <br>
+  </div>
+  <div>
+    <a href="https://se.linkedin.com/" style="float: left;">
+      <img width="15px" src="LINKEDIN">
+    </a>
+    <a href="https://gitlab.liu.se/">
+      <img width="15px" src="GitLab">
+    </a>
+    <a href="https://twitter.com/?lang=sv" style="float: left;">
+      <img width="15px" src="Twitter">
+    </a>
+  </div>
+</div>
+<div class="deadspace"></div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

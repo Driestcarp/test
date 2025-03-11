@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"> 
+  
+  <head>
+    <link href="{{ url_for('static', filename='style/mutant.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="{{ url_for('static', filename='images/page_icon.jpg')}}">
+    <title>Mutant</title>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    
+    <header>
+        <img src="../static/images/titel.png" >
+    </header>
+    <div id="content">
+        {% for player in list_of_players %}
+            <a class="player_box" href="{{url_for('player', name=player.name)}}">
+                <h1>{{player["name"]}}</h1>
+                <h3>{{player["player"]}}</h3>
+                <div style="text-align: left; margin-left: 25px; ">
+                    <p><b><u>Info:</u></b></p>
+                    {%for info in player['info']%}
+                    <p><b>{{info}}:</b> {{player['info'][info]}}</p>
+                    {% endfor %}
+                </div>
+            </a>
+        {% endfor %}
+        <form action="new_player">
+        <div class="player_box" href="{{url_for('new_player')}}">
+          <h1>Ny karaktär</h1>
+          <br>
+          <p>Namnet på den nya karaktären:</p>
+          <input name="name" value="">
+          <input type="submit" value="Skapa">
+          <br>
+          <br>
+          <br>
+          <h1>Ta bort karaktär</h1>
+          <p>Namnet på karaktären:</p>
+          <input name="rm_name" value="">
+          <input type="submit" value="Ta bort">
+
+        </div>
+      </form>
+    </div> 
+    <div style="margin-bottom: 50px;"></div>
+    <div id="footer">
+      
+    </div>
+  </body>
+</html

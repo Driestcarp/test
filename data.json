@@ -1,0 +1,187 @@
+[
+  { 
+    "project_name": "Portfolio",
+    "project_id": 0,
+    "start_date": "2023-09-01",
+    "end_date": "2023-10-16",
+    "short_description": "Projectet var att skapa denna hemsida.",
+    "long_description": "Projectet var att skapa denna hemsida. med hjälp av ptyhon, html, css, flask, jinja. Många mindre delmonent gjorda för att få till denna fina sida ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "HTML",
+      "CSS",
+      "Flask",
+      "Jinja2",
+      "LaTex",
+      "Bash"
+    ],
+    "course_id": "TDP003",
+    "course_name": "Projekt: Egna datormiljön",
+    "course_points": "",
+    "small_image": "0_small.png",
+    "big_image": "0_big.png"
+  },
+  { 
+    "project_name": "Blogg",
+    "project_id": 1,
+    "start_date": "2023-08-09",
+    "end_date": "2023-10-14",
+    "short_description": "En blogg där vi kan lägga upp våra uppgifter från TDP001",
+    "long_description": "En blogg gjord i HTML och CSS där vi har lagt upp alla våra uppgifter(veckomail) från TDP001.",
+    "external_link": "",
+    "techniques_used": [
+      "HTML",
+      "CSS"
+    ],
+    "course_id": "TDP001",
+    "course_name": "Handhavande av datormiljö",
+    "course_points": "",
+    "small_image": "1_small.png",
+    "big_image": "1_big.png"
+  },
+  { 
+    "project_name": "Lab 0: Välkommen till Python",
+    "project_id": 2,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "Syftet med denna laboration är att ni ska komma igång med Python som programmeringsspråk och att ni ska få bekanta er med den miljö ni senare kommer att arbeta med.",
+    "long_description": "Syftet med denna laboration är att ni ska komma igång med Python som programmeringsspråk och att ni ska få bekanta er med den miljö ni senare kommer att arbeta med. Ni kommer att gå igenom grundläggande aritmetiska uttryck och hur dessa kan användas på olika sätt i Python, hur ni lagrar data och resultat från beräkningar med hjälp av variabler och hur ni sedan utnyttjar denna data i nya beräkningar. Slutligen kommer ni även att gå igenom hurni kan återanvända programkod i form av moduler eller program och vad somskiljer dessa två åt. ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "2_small.png",
+    "big_image": "2_big.png"
+  },
+  { 
+    "project_name": "Lab 1: Datatyper och kontrollstrukturer",
+    "project_id": 3,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "Syftet med denna laboration är att ni ska lära er arbeta med de vanligaste datatyperna i Python samt hur ni gör för att snabbt och enkelt arbeta er igenom listor och talföljder utan att veta resultatet i förväg.",
+    "long_description": "Syftet med denna laboration är att ni ska lära er arbeta med de vanligaste datatyperna i Python samt hur ni gör för att snabbt och enkelt arbeta er igenom listor och talföljder utan att veta resultatet i förväg. Ni kommer även lära er hur Python hanterar olika typer av villkor, i vilken ordning och till vilken grad de utvärderas och vad detta har för betydelse för er kod. ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "3_small.png",
+    "big_image": "3_big.png"
+  },
+  { 
+    "project_name": "Lab 2: Funktioner och felsökning",
+    "project_id": 4,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "I denna laboration kommer ni arbeta med funktioner och procedurer, något som är en förutsättning för att kunna skriva bra och läsbar kod.",
+    "long_description": "I denna laboration kommer ni arbeta med funktioner och procedurer, något som är en förutsättning för att kunna skriva bra och läsbar kod. Ni kommer att lära er felsöka er egen och andras kod, något som är en förutsättning när ni sedan skriver större program eller applikationer där ni inte alltid kan få en bra överblick över all den kod som finns. Ni kommer även introduceras till enhetstestning, vilket är en metod för att förebygga fel och på så vis minimera den tid ni spenderar med att felsöka er kod.",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "4_small.png",
+    "big_image": "4_big.png"
+  },
+  { 
+    "project_name": "Lab 3: Algoritmer och kryptering",
+    "project_id": 5,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "I denna laboration ska ni arbeta med de egna abstrakta datatyperna card och deck (som beskrivs i föregående del ) och kontrollstrukturer på ett sådant sätt att ni kan skriva program som löser riktiga problem.",
+    "long_description": " I denna laboration ska ni arbeta med de egna abstrakta datatyperna card och deck (som beskrivs i föregående del ) och kontrollstrukturer på ett sådant sätt att ni kan skriva program som löser riktiga problem. Laborationen är tänkt att öka er förståelse för problemlösning med hjälp av programmering. Även om inte alla algoritmer har ett officiellt namn kan de flesta lösningar på ett problem beskrivas enligt en algoritm. Wikipedia beskriver en algoritm på följande sätt: En algoritm är inom matematiken och datavetenskapen en begränsad uppsättning (mängd) väldefinierade instruktioner för att lösa en uppgift, som från givna utgångstillstånd (starttillstånd) med säkerhet leder till något givet sluttillstånd. Den kan också beskrivas som en systematisk procedur för hur man genom ett begränsat antal steg utför en beräkning eller löser ett problem.",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "5_small.png",
+    "big_image": "5_big.png"
+  },
+  { 
+    "project_name": "Lab 4: Datastrukturer och interpretatorer",
+    "project_id": 6,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "Syftet med denna laboration är att ni ska lära er att skapa modeller av ett scenario för att sedan kunna modifiera och utveckla detta scenario enligt en uppsättning regler som inte får förändras allt eftersom scenariot förändras.",
+    "long_description": "Syftet med denna laboration är att ni ska lära er att skapa modeller av ett scenario för att sedan kunna modifiera och utveckla detta scenario enligt en uppsättning regler som inte får förändras allt eftersom scenariot förändras. Ni kommer dessutom lära er att interpretera och tolka data för att sedan översätta det till ett format som bättre passar ert program. ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "6_small.png",
+    "big_image": "6_big.png"
+  },
+  { 
+    "project_name": "Lab 5: Funktioner av högre ordningen",
+    "project_id": 7,
+    "start_date": "",
+    "end_date": "",
+    "short_description": "Syftet med denna laboration är att ni ska lära er abstrahera problem till en sådan nivå att ni kan återanvända funktioner och kodstycken till snarlika uppgifter.",
+    "long_description": "Syftet med denna laboration är att ni ska lära er abstrahera problem till en sådan nivå att ni kan återanvända funktioner och kodstycken till snarlika uppgifter. På så vis kommer ni spendera mindre tid till att kopiera och klistra in och desto mer tid till att faktiskt programmera, det kommer även resultera i en mindre kodbas vilket alltid är bra ifall ni måste underhålla den kod ni skrivit. ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "7_small.png",
+    "big_image": "7_big.png"
+  },
+  { 
+    "project_name": "Lab 6: Sökning, sortering och riktiga program",
+    "project_id": 8,
+    "start_date": "",
+    "end_date": "202",
+    "short_description": "Syftet med denna laboration är att ni ska få en bättre förståelse för vilket arbete som krävs av processorn och hur ni kan minimera den tid era program arbetar med att gå igenom listor eller söka efter data.",
+    "long_description": "Syftet med denna laboration är att ni ska få en bättre förståelse för vilket arbete som krävs av processorn och hur ni kan minimera den tid era program arbetar med att gå igenom listor eller söka efter data. Slutligen ska ni skriva några riktiga program som ni faktiskt kan ha användning för senare i er utbildning. ",
+    "external_link": "",
+    "techniques_used": [
+      "Python",
+      "Bash"
+    ],
+    "course_id": "TDP002",
+    "course_name": "Imperativ programmering",
+    "course_points": "",
+    "small_image": "8_small.png",
+    "big_image": "8_big.png"
+  },
+  { 
+    "project_name": "Spel i C++",
+    "project_id": 9,
+    "start_date": "2023-11-30",
+    "end_date": "2023-12-15",
+    "short_description": "Projectet var att skapa ett spel i c++ med class struktur.", 
+    "long_description": "Projektet var att skapa ett spel i c++ med klasstruktur. Skrivet i inheritance stil. Spelet är ett så kallat top-down shooter där det finns 4 olika typer av fiender.  Melee som springer mot en och slår en vid kollision, Ranger som håller sig på avstånd och skjuter skott mot spelaren,  Exploder som springer på spelaren och sprängs och Slime  som går omkring på skärmen och gör skada på spelaren när dem kolliderar. Spelet går ut på att överleva så länge man kan och samla ihop poäng genom att döda fiender innan fienderna dödar spelaren. när fiender dör finns en chans att de tappar Items, som granater eller extra hälsa. Spelaren rör sig med hjälp av WASD tangenterna, man skjuter skott på vänster musknapp, kastar granater på höger musknapp och använder Items med E tangenten. Under projektet lärde jag mig hur en bra klasstruktur på inheritance sättet ska vara uppbyggt samt hur bra filuppdelning underlättar skrivandet av kod.",
+    "external_link": "",
+    "techniques_used": [
+      "C++"      
+    ],
+    "course_id": "TDP005",
+    "course_name": "Projekt: Objektorienterat system",
+    "course_points": "",
+    "small_image": "9_small.png",
+    "big_image": "9_big.gif"
+  }
+  ]
+  

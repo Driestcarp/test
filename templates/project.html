@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{project_to_render.project_name}}
+{% endblock %}
+
+{% block page_name %}
+  Project
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="nav_bar">
+    <a href="{{url_for('index')}}"><div class="nav_element">Home</div></a>
+    <a href="{{url_for('list')}}"><div class="nav_element">Projects</div></a>
+    <a href="{{url_for('techniques')}}"><div class="nav_element">Techniques</div></a>
+    <a href="{{url_for('about_me')}}"><div class="nav_element">About me</div></a>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="project_large_box">
+    <div class="project_left_div">
+      <h1 class="project_h1">Project description</h1>
+      <p>{{project_to_render.long_description}}</p>
+      
+
+      <div class="project_tech_info">
+        <p>End Date: {{project_to_render.end_date}}</p>
+        <br>
+        <p>Category: {{project_to_render.course_id}}</p>
+        <br>
+        <p>Tags: {{project_to_render.techniques_used}}</p>
+      </div>
+    </div>
+    <!-- Bilderna --> 
+    <div class="project_right_div">
+      <div class="project_big_img">
+        <img src="{{url_for('static', filename='images/' + project_to_render.big_image)}}">
+      </div>
+      <div class="project_small_img">
+        <img src="{{url_for('static', filename='images/' + project_to_render.small_image)}}">
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}

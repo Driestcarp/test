@@ -1,0 +1,109 @@
+{
+    "player": "",
+    "name": "",
+    "picture": "",
+    "short_name": "",
+    "gm": "",
+    "info": {
+        "Ålder": "",
+        "Kön": "",
+        "Längd": "",
+        "Vikt": "",
+        "Klass": "",
+        "Tidigare yrke": "",
+        "Hemort": ""
+    },
+    "Utseende_uppe": "",
+    "Utseende": "",
+    "stats": {
+        "Styrka": "",
+        "Fysik": "",
+        "Storlek": "",
+        "Smidighet": "",
+        "Intelligens": "",
+        "Vilja": "",
+        "Personlighet": ""
+    },
+    "misc": {
+        "initiativbonus": "",
+        "skadebonus": "",
+        "bärförmåga": "",
+        "reaktionsvärde": "",
+        "Rykte": "",
+        "status": "",
+        "förfly_strid": "",
+        "förfly_springa": "",
+        "förfly_sprint": "",
+        "max_kroppspoäng": "",
+        "kroppspoäng": "",
+        "traumatröskel": ["","",""],
+        "stab": "",
+        "iaktagelse_minus": "",
+        "bärvikt": "",
+        "bär_minus": "",
+        "rust_beg": ""
+    },
+    "natural_skills": {
+        "Akrobatik": "0",
+        "Båge": "0",
+        "Första hjälpen": "0",
+        "Gevär": "0",
+        "Iaktagelseförmåga": "0",
+        "Kasta": "0",
+        "Köpslå": "0",
+        "Närstrid": "0",
+        "Pistol": "0",
+        "Smyga/Gömma sig": "0"
+    },
+    "trained_skills": {
+    },
+    "abilities": {
+    },
+    "resonans": 0,
+    "armor": {
+        "head": [
+            "","",""
+        ],
+        "chest": [
+            "","",""
+        ],
+        "right_arm": [
+            "","",""
+        ],
+        "left_arm": [
+            "","",""
+        ],
+        "right_leg": [
+            "","",""
+        ],
+        "left_leg": [
+            "","",""
+        ]
+    },
+    "figur": {
+        "huvud": "",
+        "kropp": "",
+        "h_arm": "",
+        "v_arm": "",
+        "h_ben": "",
+        "v_ben": ""
+    },
+    "stridsfärdigheter": {
+    },
+    "ammo": {
+    },
+    "equipment": [
+    ],
+    "weapons": [
+    ],
+    "stash": [
+        {
+            "pocket_money": "",
+            "bank_money1": "",
+            "bank_money2": ""
+        },
+        [
+            
+        ]
+    ]
+}

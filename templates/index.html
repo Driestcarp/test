@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Home
+{% endblock %}
+
+{% block page_name %}
+  Home
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="nav_bar">
+    <a href="{{url_for('index')}}"><div class="selected" class="nav_element">Home</div></a>
+    <a href="{{url_for('list')}}"><div class="nav_element">Projects</div></a>
+    <a href="{{url_for('techniques')}}"><div class="nav_element">Techniques</div></a>
+    <a href="{{url_for('about_me')}}"><div class="nav_element">About me</div></a>
+  </div>
+{% endblock %}
+
+{% block content %}
+<div class="homebox">
+  <div class="homebox_head">
+    <h1 class="homebox_h1">Välkommen till mitt portfolio!</h1>
+    <p>
+      <br>
+      Välkommen till mitt projektportfolio-websida. <br>
+      Jag är glad över att du har tagit dig tid att utforska min professionella resa och mina projekt.
+      På denna sida har jag samlat några av de projekt och prestationer som jag är mest stolt över. Här hittar du exempel på mitt arbete inom områden som webbutveckling, design, projektledning och mer.
+      Mitt mål med denna plattform är att ge dig en djupare inblick i min kompetens och kreativa förmåga.
+      Genom att bläddra igenom mina projekt kan du få en känsla av min arbetsprocess för att uppnå resultat. Jag hoppas att du kommer att finna något som intresserar dig.
+      Om du har några frågor eller om det finns något specifikt du skulle vilja diskutera, tveka inte att kontakta mig.
+    </p>
+  </div>
+  <a href="{{url_for('project', project_id=latest_project.project_id)}}">
+    <div class="homebox_project">
+      <div class="homebox_project_text">
+        <h1>Latest Project: {{latest_project.project_name}}</h1>
+        <br>
+        <h2>About the project</h2>
+        <p>{{latest_project.short_description}}</p>
+      </div>
+      <div class="homebox_img">
+        <img src="{{url_for('static', filename='images/' + latest_project.small_image)}}" alt="">
+      </div>
+      <div class="homebox_project_info">
+        <p>End Date: {{latest_project.end_date}}</p>
+        <br>
+        <p>Category: {{latest_project.course_id}}</p>
+        <br>
+        <p>Tags: {{latest_project.techniques_used}}</p>
+      
+      </div>
+      
+    </div>
+  </a>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+  {{ super() }}
+{% endblock %}
+
